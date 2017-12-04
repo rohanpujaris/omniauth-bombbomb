@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Rohan Pujari"]
   spec.email         = ["rohan.pujari@kiprosh.com"]
 
-  spec.summary       = %q{Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{Write a longer description or delete this line.}
+  spec.summary       = %q{Oauth authentication for bombbomb.}
+  spec.description   = %q{Oauth authentication for bombbomb.}
   spec.homepage      = "https://github.com/rohanpujaris/omniauth-bombbomb"
   spec.license       = "MIT"
 

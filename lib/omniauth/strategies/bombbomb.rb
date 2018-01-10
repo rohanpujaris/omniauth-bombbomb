@@ -13,11 +13,18 @@ module OmniAuth
 
       option :scope, 'all:manage'
 
-      uid { raw_info["info"]["user_id"] }
+      uid { raw_info['userId'] }
+
+      info {
+        {
+          first_name: raw_info['firstName'],
+          last_name: raw_info['lastName'],
+          email: raw_info['userName']
+        }
+      }
 
       def raw_info
-        response = access_token.get("app/api/api.php", params: {method: "IsValidLogin"})
-        @raw_info ||= JSON.parse(response.body)
+        @raw_info ||= access_token.get('https://api.bombbomb.com/v2/accounts').parsed
       end
     end
   end
